@@ -1,7 +1,7 @@
 # Личный проект «Пинк» 
 
 * Студент: [Светлана Севалкина](https://up.htmlacademy.ru/adaptive/23/user/1685555).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Лесухин](https://htmlacademy.ru/profile/caneklis).
 
 ---
 
