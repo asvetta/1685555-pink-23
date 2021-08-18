@@ -1,1 +1,144 @@
-// Начните писать стили здесь
+// @import("global/variables.less");
+
+// Colors
+
+@black: #000000;
+@white: #ffffff;
+@lightblack: #1d2631;
+@grey: #f2f2f2;
+@darkgrey: #283645;
+@green: #3dc644;
+@orange: #f25b26;
+@pink: #d22856;
+@darkgreen: #2aab6d;
+@lightgrey: #e5e5e5;
+@extradarkgreen: #1c9b5e;
+
+// Viewports
+
+@tablet-width: 660px;
+@desktop-width: 1200px;
+@mobile-width-only: 320px;
+
+// @import("global/fonts.less");
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("fonts/opensans.woff2") format("woff2"),
+    url("fonts/opensans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("fonts/opensansbold.woff2") format("woff2"),
+    url("fonts/opensansbold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: light;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("fonts/opensanslight.woff2") format("woff2"),
+    url("fonts/opensanslight.woff") format("woff");
+}
+
+// @import("global/global.less");
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+// @import("blocks/page.less");
+
+.page {
+  height: 100%;
+  font-size: 14px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  line-height: 27px;
+}
+
+.page__body {
+  min-height: 100%;
+  margin: 0 auto;
+  background-color: @white;
+  color: @darkgrey;
+  width: 320px;
+}
+
+// @import("blocks/page-header.less");
+
+.page-header {
+  background-color: @darkgrey;
+  color: @white;
+}
+
+.page-header__logo {
+  height: 40px;
+  padding-left: 20px;
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
+// @import("blocks/main-nav.less");
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__toggle {
+  margin-left: auto;
+  padding-right: 20px;
+}
+
+// @import("blocks/site-list.less");
+
+.site-list__item {
+  text-align: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  line-height: 32px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  color: @white;
+}
+
+// @import("blocks/download.less");
+
+.download__wrapper {
+  background-image: url(../img/index-imgs/phone.jpg);
+  background-color: @lightblack;
+  color: @white;
+  text-align: center;
+
+}
+
+
+
