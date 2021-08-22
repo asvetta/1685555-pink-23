@@ -20,7 +20,8 @@
   margin-bottom: 20px;
 }
 
-.gallery__special {
+.gallery__item--special::before {
+  content: "Панорама дня";
   background-color: @pink;
   color: @white;
   text-transform: uppercase;
@@ -28,6 +29,8 @@
   font-size: 12px;
   line-height: 24px;
   margin: 0;
+  width: 140px;
+  height: 36px;
 }
 
 .gallery__user {

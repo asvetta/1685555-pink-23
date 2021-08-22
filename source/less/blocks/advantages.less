@@ -53,3 +53,16 @@
   background-color: @grey;
   text-align: center;
 }
+
+@media (max-width: @tablet-width) {
+  .advantages__special {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__list {
+    display: flex;
+    justify-content: center;
+  }
+}

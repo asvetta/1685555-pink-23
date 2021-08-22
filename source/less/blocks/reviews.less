@@ -48,3 +48,57 @@
   line-height: 30px;
   color: @darkgrey;
 }
+
+@media (max-width: @tablet-width) {
+  .reviews__author-age {
+    display: none;
+  }
+
+  .reviews__prev {
+    display: none;
+  }
+
+  .reviews__next {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .reviews__author-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .reviews__text {
+    order: 1;
+    margin-bottom: 50px;
+  }
+
+  .reviews__author-name {
+    order: 2;
+    margin-bottom: 15px;
+  }
+
+  .reviews__author-age {
+    order: 3;
+    margin-bottom: 40px;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  .reviews__prev {
+    display: none;
+  }
+
+  .reviews__next {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews__toggles {
+    display: none;
+  }
+}
