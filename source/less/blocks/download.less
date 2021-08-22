@@ -1,13 +1,38 @@
-.download__platforms-list {
-  .list-reset;
-}
-
 .download__wrapper {
-  background-image: url(img/index-imgs/phone.jpg);
   background-color: @lightblack;
   color: @white;
   text-align: center;
   background-repeat: no-repeat;
+  padding-bottom: 37px;
+}
+
+.download__header{
+  background-image: url(../img/index-imgs/phone.jpg);
+  background-color: @darkgrey;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 462px;
+}
+
+.download__slogan {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 120%;
+  padding-top: 100px;
+}
+
+.download__platforms-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .list-reset;
+  margin-top: 32px;
+  margin-bottom: 29px;
+}
+
+.download__item:nth-child(2) {
+  margin-left: 35px;
+  margin-right: 35px;
 }
 
 .download__button {
@@ -19,6 +44,12 @@
   text-align: center;
   color: @white;
   background-color: @lightblack;
+  border: 3px solid @white;
+  box-sizing: border-box;
+  border-radius: 29px;
+  width: 280px;
+  height: 55px;
+  margin-top: 28px;
 }
 
 .download__description {
@@ -27,4 +58,9 @@
   line-height: 24px;
   text-align: center;
   color: @white;
+  margin-top: 0;
+}
+
+.download__slogan {
+  margin: 0;
 }
