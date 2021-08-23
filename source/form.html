@@ -33,7 +33,7 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link"  href="index.html">Главная</a>
+            <a class="main-nav__link" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="catalog.html">Фотографии</a>
@@ -61,21 +61,21 @@
         <p class="competition__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль
           на вашу бонусную карту!</p>
         <form class="competition__form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="competition__item competition__line">
-            <ul class="competition__list competition__line-list">
-              <li class="competition__list-item competition__line-item">
-                <label class="competition__line-label" for="your-surname">Фамилия:</label><br>
-                <input class="competition__line-input" type="text" name="your-surname" id="your-surname"
+          <div class="competition__item competition__name">
+            <ul class="competition__list competition__name-list">
+              <li class="competition__list-item competition__name-item">
+                <label class="competition__name-label" for="your-surname">Фамилия:</label><br>
+                <input class="competition__name-input" type="text" name="your-surname" id="your-surname"
                   placeholder="Укажите фамилию *">
               </li>
-              <li class="competition__list-item competition__line-item">
-                <label class="competition__line-label" for="your-name">Имя:</label><br>
-                <input class="competition__line-input" type="text" name="your-name" id="your-name"
+              <li class="competition__list-item competition__name-item">
+                <label class="competition__name-label" for="your-name">Имя:</label><br>
+                <input class="competition__name-input" type="text" name="your-name" id="your-name"
                   placeholder="Введите ваше имя *">
               </li>
-              <li class="competition__list-item competition__line-item">
-                <label class="competition__line-label" for="your-patronymic">Отчество:</label><br>
-                <input class="competition__line-input" type="text" name="your-patronymic" id="your-patronymic"
+              <li class="competition__list-item competition__name-item">
+                <label class="competition__name-label" for="your-patronymic">Отчество:</label><br>
+                <input class="competition__name-input" type="text" name="your-patronymic" id="your-patronymic"
                   placeholder="Ну и отчество тоже">
               </li>
             </ul>
@@ -115,18 +115,22 @@
               </ul>
             </fieldset>
           </div>
-          <div class="competition__item competition__line">
-            <ul class="competition__list competition__line-list">
-              <li class="competition__list-item competition__line-item">
-                <label class="competition__line-label" for="tel">Номер телефона</label><br>
-                <input class="competition__line-input" type="text" name="tel" id="tel" placeholder="Номер, пожалуйста">
-              </li>
-              <li class="competition__list-item competition__line-item">
-                <label class="competition__line-label" for="email">Адрес почты</label><br>
-                <input class="competition__line-input" type="text" name="email" id="email"
-                  placeholder="Введите почту *">
-              </li>
-            </ul>
+          <div class="competition__item competition__contacts">
+            <fieldset class="competition__fieldset competition__fieldset-contacts">
+              <legend class="competition__legend competition__legend-contacts">Контактная информация</legend>
+              <ul class="competition__list competition__contacts-list">
+                <li class="competition__list-item competition__contacts-item">
+                  <label class="competition__contacts-label" for="tel">Номер телефона</label><br>
+                  <input class="competition__contacts-input" type="text" name="tel" id="tel"
+                    placeholder="Номер, пожалуйста">
+                </li>
+                <li class="competition__list-item competition__contacts-item">
+                  <label class="competition__contacts-label" for="email">Адрес почты</label><br>
+                  <input class="competition__contacts-input" type="text" name="email" id="email"
+                    placeholder="Введите почту *">
+                </li>
+              </ul>
+            </fieldset>
           </div>
           <div class="competition__item competition__radio">
             <fieldset class="competition__fieldset competition__fieldset-radio">
@@ -153,12 +157,12 @@
               </ul>
             </fieldset>
           </div>
-          <div class="competition__item competition__textarea">
+          <div class="competition__item competition__textarea-wrapper">
             <fieldset class="competition__fieldset competition__fieldset-textarea">
               <legend class="competition__legend competition__legend-textarea">
                 Опишите свои эмоции
               </legend>
-              <textarea class="competition__textarea" name="emotions" id="emotions-field" rows="8"
+              <textarea class="competition__textarea" name="emotions" id="emotions-field" rows="10"
                 placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </fieldset>
           </div>
@@ -174,7 +178,9 @@
         <h2 class="visually-hidden">Ошибка</h2>
         <h3 class="error__title">Что-то пошло не так!</h3>
         <p class="error__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-        <button class="error__button" type="button">Ок</button>
+        <div class="error__button-wrapper">
+          <button class="error__button" type="button">Ок</button>
+        </div>
       </div>
     </section>
     <section class="success">

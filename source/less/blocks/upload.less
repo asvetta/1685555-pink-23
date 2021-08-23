@@ -33,3 +33,35 @@
   opacity: 0.3;
   border: 3px solid @darkgrey;
 }
+
+@media (min-width: @tablet-width) {
+  .upload__settings {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+
+  .upload__img-wrapper {
+    width: 48%;
+  }
+
+  .upload__options {
+    width: 48%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 70px;
+  }
+
+  .upload__buttons {
+    padding: 0;
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .upload__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -60,3 +60,29 @@
   line-height: 24px;
   margin: 0;
 }
+
+@media (min-width: @tablet-width) {
+  .gallery__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .gallery__item {
+    width: 48%;
+  }
+
+  .gallery__item--special {
+    width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gallery__item {
+    width: 32%;
+  }
+
+  .gallery__item--special {
+    width: 100%;
+  }
+}

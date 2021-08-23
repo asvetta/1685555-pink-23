@@ -19,14 +19,15 @@
   padding-bottom: 15px;
 }
 
-.competition__line-label {
+.competition__name-label {
   font-size: 14px;
   line-height: 30px;
   color: @pink;
   margin-left: 40px;
+  text-transform: uppercase;
 }
 
-.competition__line-input {
+.competition__name-input {
   font-size: 18px;
   line-height: 30px;
   color: @darkgrey;
@@ -36,7 +37,31 @@
   border-radius: 1px;
 }
 
-.competition__line-input::placeholder {
+.competition__name-input::placeholder {
+  font-size: 18px;
+  line-height: 30px;
+  color: @darkgrey;
+}
+
+.competition__contacts-label {
+  font-size: 14px;
+  line-height: 30px;
+  color: @pink;
+  margin-left: 40px;
+  text-transform: uppercase;
+}
+
+.competition__contacts-input {
+  font-size: 18px;
+  line-height: 30px;
+  color: @darkgrey;
+  margin-left: 20px;
+  margin-bottom: 25px;
+  border: 2px solid @grey;
+  border-radius: 1px;
+}
+
+.competition__contacts-input::placeholder {
   font-size: 18px;
   line-height: 30px;
   color: @darkgrey;
@@ -113,4 +138,176 @@
   font-size: 14px;
   line-height: 30px;
   color: @darkgrey;
+}
+
+@media (min-width: @tablet-width) {
+  .competition__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .competition__name {
+    order: 1;
+    .margin-form-tablet;
+  }
+
+  .competition__radio {
+    order: 2;
+    background-color: @white;
+  }
+
+  .competition__contacts {
+    order: 3;
+  }
+
+  .competition__checkbox {
+    order: 4;
+    background-color: @white;
+  }
+
+  .competition__textarea-wrapper {
+    order: 5;
+  }
+
+  .competition__button-wrapper {
+    order: 6;
+  }
+
+  .competition__fieldset-radio {
+    .border-form;
+    .padding-form-tablet;
+    .margin-form-tablet;
+  }
+
+  .competition__fieldset-contacts {
+    .border-form;
+    .padding-form-tablet;
+    .margin-form-tablet;
+  }
+
+  .competition__fieldset-checkbox {
+    .border-form;
+    .padding-form-tablet;
+    .margin-form-tablet;
+  }
+
+  .competition__fieldset-textarea {
+    .border-form;
+    .padding-form-tablet;
+    .margin-form-tablet;
+    width: 100%;
+  }
+
+  .competition__button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .margin-form-tablet;
+  }
+
+  .competition__name-item  {
+    display: flex;
+  }
+
+  .competition__name-input {
+    width: 100%;
+  }
+
+  .competition__contacts-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .competition__contacts-input {
+    order: 1;
+    margin-bottom: 20px;
+  }
+
+  .competition__contacts-label {
+    order: 2;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .competition__form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .competition__name {
+    width: 48%;
+    padding-top: 15px;
+  }
+
+  .competition__name-list {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 56px;
+  }
+
+  .competition__radio {
+    width: 48%;
+    padding-top: 0;
+  }
+
+  .competition__checkbox {
+    width: 100%;
+  }
+
+  .competition__checkbox-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .competition__checkbox-item {
+    width: 33%;
+  }
+
+  .competition__contacts {
+    width: 100%;
+  }
+
+  .competition__checkbox-item:first-child {
+    order: 1;
+  }
+
+  .competition__checkbox-item:nth-child(2) {
+    order: 4;
+  }
+
+  .competition__checkbox-item:nth-child(3) {
+    order: 2;
+  }
+
+  .competition__checkbox-item:nth-child(4) {
+    order: 5;
+  }
+
+  .competition__checkbox-item:nth-child(5) {
+    order: 3;
+  }
+
+  .competition__checkbox-item:nth-child(6) {
+    order: 6;
+  }
+
+  .competition__contacts-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+  }
+
+  .competition__textarea-wrapper {
+    width: 100%;
+  }
+
+  .competition__fieldset-textarea {
+    text-align: center;
+  }
+
+  .competition__button-wrapper {
+    width: 100%;
+  }
 }
