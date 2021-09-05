@@ -1,3 +1,7 @@
+.main-nav--open {
+  display: none;
+}
+
 .main-nav__header {
   display: flex;
   justify-content: space-between;
@@ -10,13 +14,18 @@
 .main-nav__item {
   text-align: center;
   margin-top: 2px;
+  box-shadow: 0 1px 0 @black, inset 0 1px 0 @black-opacity-extra;
+}
+
+.main-nav__item:last-child {
+  border-bottom: solid 1px @black;
 }
 
 .main-nav__link {
   display: block;
   padding: 25px 0;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 18px;
   line-height: 32px;
   text-transform: uppercase;
   color: @white;
@@ -25,7 +34,10 @@
 
 .main-nav__toggle {
   margin-left: auto;
-  padding-right: 20px;
+  margin-right: 20px;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
 @media (min-width: @desktop-width) {
@@ -53,6 +65,10 @@
 
   .main-nav__item {
     box-shadow: none;
+  }
+
+  .main-nav__item:last-child {
+    border: none;
   }
 
   .main-nav__link {

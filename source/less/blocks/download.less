@@ -2,16 +2,7 @@
   background-color: @lightblack;
   color: @white;
   text-align: center;
-  background-repeat: no-repeat;
   padding-bottom: 37px;
-}
-
-.download__header {
-  background-image: url("../img/index-imgs/phone.jpg");
-  background-color: @darkgrey;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 462px;
 }
 
 .download__slogan {
@@ -20,6 +11,7 @@
   line-height: 120%;
   padding-top: 100px;
   margin: 0;
+  margin-bottom: 348px;
 }
 
 .download__platforms-list {
@@ -48,7 +40,6 @@
   border: 3px solid @white;
   box-sizing: border-box;
   border-radius: 29px;
-  margin-top: 28px;
 }
 
 .download__description {
@@ -58,4 +49,22 @@
   text-align: center;
   color: @white;
   margin-top: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .download__wrapper {
+    padding-right: 50%;
+  }
+
+  .download__slogan {
+    margin-bottom: 40px;
+    line-height: 120%;
+    font-size: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .download__description {
+    font-size: 18px;
+  }
 }

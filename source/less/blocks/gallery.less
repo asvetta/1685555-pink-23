@@ -18,9 +18,12 @@
 .gallery__item {
   background-color: @grey;
   margin-bottom: 20px;
+  width: 280px;
+  text-align: left;
+  .margin-center;
 }
 
-.gallery__item--special::before {
+.gallery__special::before {
   content: "Панорама дня";
   background-color: @pink;
   color: @white;
@@ -55,6 +58,11 @@
 }
 
 .gallery__likes {
+  display: flex;
+  justify-content: space-around;
+}
+
+.gallery__number {
   font-weight: 400;
   font-size: 12px;
   line-height: 24px;
@@ -72,7 +80,7 @@
     width: 48%;
   }
 
-  .gallery__item--special {
+  .gallery__special {
     width: 100%;
   }
 }
@@ -82,7 +90,7 @@
     width: 32%;
   }
 
-  .gallery__item--special {
+  .gallery__special {
     width: 100%;
   }
 }
