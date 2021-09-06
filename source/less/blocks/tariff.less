@@ -1,23 +1,38 @@
+.tariff {
+  background-color: @grey;
+}
+
 .tariff__wrapper {
   text-align: center;
   background-color: @grey;
   padding-top: 80px;
   padding-bottom: 40px;
+  overflow: hidden;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .tariff__table {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
+  border-collapse: collapse;
+  width: calc(276px * 3);
+  transform: translateX(-254px);
 }
 
 .tariff__cell-header {
   background-color: @darkgrey;
   color: @white;
   width: 152px;
-  height: 75px;
-  border: 2px solid @darkgrey;
+  border: 2px solid @grey;
   border-radius: 1px;
+}
+
+.tariff__cell-header--empty {
+  opacity: 0;
+  border-color: transparent;
+  display: none;
 }
 
 .tariff__text-header {
@@ -25,13 +40,18 @@
   font-size: 16px;
   line-height: 30px;
   color: @white;
+  margin: 0;
+}
+
+.tariff__text-header--hit {
+  position: relative;
 }
 
 .tariff__text-header--hit::before {
-  content: "Хит";
-  text-transform: uppercase;
-  background-color: @pink;
-  color: @white;
+  content: url('../img/index-imgs/hit.svg');
+  position: absolute;
+  top: -1px;
+  left: -1px;
 }
 
 .tariff__text {
@@ -55,12 +75,19 @@
   color: @darkgrey;
   border: 2px solid @lightgrey;
   border-radius: 1px;
-  width: 153px;
-  height: 45px;
+  width: 276px;
+  min-height: 45px;
+}
+
+.tariff__cell-row--hit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .tariff__text-cell-header {
   text-align: left;
+  display: none;
 }
 
 .tariff__toggles {
@@ -68,7 +95,30 @@
 }
 
 @media (min-width: @tablet-width) {
+  .tariff__wrapper {
+    width: 620px;
+  }
+
+  .tariff__table {
+    transform: translateX(0);
+    width: 100%;
+  }
+
   .tariff__toggles {
     display: none;
+  }
+
+  .tariff__text-cell-header {
+    display: block;
+  }
+
+  .tariff__cell-header--empty {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width-width) {
+  .tariff__wrapper {
+    width: 940px;
   }
 }
