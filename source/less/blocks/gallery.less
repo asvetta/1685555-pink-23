@@ -37,15 +37,7 @@
 }
 
 .gallery__user {
-  font-weight: 700;
   font-size: 14px;
-  line-height: 24px;
-  margin: 0;
-}
-
-.gallery__time {
-  font-weight: 300;
-  font-size: 12px;
   line-height: 24px;
   margin: 0;
 }
@@ -55,11 +47,6 @@
   font-size: 14px;
   line-height: 24px;
   margin: 0;
-}
-
-.gallery__likes {
-  display: flex;
-  justify-content: space-around;
 }
 
 .gallery__number {
@@ -88,6 +75,24 @@
 @media (min-width: @desktop-width) {
   .gallery__item {
     width: 32%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery__img {
+    grid-column: 1/-1;
+  }
+
+  .gallery__heart {
+    grid-column: 2/3;
+  }
+
+  .gallery__likes {
+    grid-column: 1/2;
+  }
+
+  .gallery__post {
+    grid-column: 1/-1;
   }
 
   .gallery__special {

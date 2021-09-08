@@ -1,4 +1,5 @@
-.advantages__slogan {
+.advantages__question,
+.advantages__suggestion {
   font-style: normal;
   font-weight: 300;
   font-size: 24px;
@@ -9,12 +10,7 @@
   text-align: center;
   padding-top: 51px;
   padding-bottom: 70px;
-}
-
-.advantages__slogan-style {
-  content: "";
-  display: block;
-  height: 45px;
+  padding: 0;
 }
 
 .advantages__list {
@@ -61,7 +57,7 @@
   }
 }
 
-@media (min-width: @tablet-width) and (max-width: @desktop-width){
+@media (min-width: @tablet-width) {
 
   .advantages__wrapper {
     margin-bottom: 100px;
@@ -86,18 +82,12 @@
   .advantages__description {
     text-align: left;
   }
-}
-
-@media (min-width: @tablet-width) {
-  .advantages__slogan {
+  .advantages__question,
+  .advantages__suggestion {
     font-size: 40px;
     line-height: auto;
-  }
-
-  .advantages__slogan-style {
-    content: "";
-    display: block;
-    height: 0;
+    margin: 0;
+    padding: 0;
   }
 }
 
