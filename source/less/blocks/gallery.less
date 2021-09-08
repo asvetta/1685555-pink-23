@@ -24,6 +24,7 @@
 }
 
 .gallery__special::before {
+  display: none;
   content: "Панорама дня";
   background-color: @pink;
   color: @white;
@@ -56,6 +57,14 @@
   margin: 0;
 }
 
+.gallery__img {
+  width: 100%;
+}
+
+.gallery_img--special {
+  width: 100%;
+}
+
 @media (min-width: @tablet-width) {
   .gallery__list {
     display: flex;
@@ -65,37 +74,93 @@
 
   .gallery__item {
     width: 48%;
-  }
-
-  .gallery__special {
-    width: 100%;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .gallery__item {
-    width: 32%;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
-  .gallery__img {
-    grid-column: 1/-1;
+  .gallery__img,
+  .gallery__user,
+  .gallery__post {
+    grid-column-start: 1;
+    grid-column-end: -1;
   }
 
   .gallery__heart {
-    grid-column: 2/3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    align-self: center;
+    margin-left: auto;
+    margin-right: 30px;
   }
 
   .gallery__likes {
-    grid-column: 1/2;
-  }
-
-  .gallery__post {
-    grid-column: 1/-1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
   }
 
   .gallery__special {
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 45px;
+  }
+
+  .gallery_img--special {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .gallery__user--special {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .gallery__likes--special {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-left: auto;
+    margin-right: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .gallery__heart--special {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .gallery__post--special {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+
+  .upload__edit {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gallery__special {
+    width: 940px;
+    .margin-center;
+  }
+
+  .gallery__list {
+    width: 940px;
+    .margin-center;
+  }
+
+  .gallery__item {
+    width: 32%;
   }
 }

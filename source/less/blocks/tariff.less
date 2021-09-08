@@ -48,7 +48,7 @@
 }
 
 .tariff__text-header--hit::before {
-  content: url('../img/index-imgs/hit.svg');
+  content: url("../img/index-imgs/hit.svg");
   position: absolute;
   top: -1px;
   left: -1px;
@@ -109,11 +109,19 @@
   }
 
   .tariff__text-cell-header {
-    display: block;
+    display: table-cell;
   }
 
   .tariff__cell-header--empty {
     display: block;
+  }
+
+  .tariff_option {
+    display: none;
+  }
+
+  .tariff__cell-row--hit {
+    justify-content: center;
   }
 }
 
