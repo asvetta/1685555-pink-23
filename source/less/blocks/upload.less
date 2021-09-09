@@ -13,16 +13,46 @@
 .upload__settings {
   background-color: @grey;
   padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.upload__scale-wrapper {
+  width: 100%;
+}
+
+.upload__scale {
+  display: block;
+  height: 2px;
+}
+
+.upload__bar {
+  display: block;
+  height: 2px;
+  width: 240px;
+  background-color: @darkgrey;
+}
+
+.upload__crop-scale {
+  display: none;
+}
+
+.upload__contrast-scale {
+  display: none;
 }
 
 .upload__buttons {
   background-color: @grey;
   padding-bottom: 40px;
+  padding-top: 40px;
 }
 
 .upload__edit {
   margin-left: 57px;
   margin-right: 69px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .upload__post {
