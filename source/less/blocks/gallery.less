@@ -23,10 +23,22 @@
   .margin-center;
 }
 
+.gallery__special {
+  position: relative;
+  width: 100%;
+  background-color: transparent;
+}
+
 .gallery__user {
   font-size: 14px;
   line-height: 24px;
   margin: 0;
+}
+
+.gallery__user--special {
+  width: 280px;
+  background-color: @grey;
+  .margin-center;
 }
 
 .gallery__post {
@@ -43,16 +55,34 @@
   margin: 0;
 }
 
+.gallery__number {
+  width: 280px;
+  background-color: @grey;
+  .margin-center;
+}
+
 .gallery__img {
   width: 100%;
 }
 
-.gallery_img--special {
-  width: 100vw;
+.gallery__likes {
+  margin: 0;
 }
 
-.gallery__special {
-  position: relative;
+.gallery__user--special,
+.gallery__post--special,
+.gallery__likes--special {
+  width: 280px;
+  background-color: @grey;
+  .margin-center;
+}
+
+.gallery__heart--special {
+  width: 280px;
+  background-color: @grey;
+  align-self: left;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .gallery__special::before {
