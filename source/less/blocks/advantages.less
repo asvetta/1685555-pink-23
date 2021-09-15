@@ -1,6 +1,6 @@
 .advantages__wrapper {
   .margin-center;
-  background-color: @white;
+  background-color: @grey;
 }
 
 .advantages__question {
@@ -35,14 +35,12 @@
   .list-reset;
   background-color: @grey;
   padding-top: 53px;
-}
-
-.advantages__item:last-child {
   padding-bottom: 325px;
-  background-image: url("../img/index-imgs/smile-mobile.jpg");
+  background-image: url("../img/index-imgs/advantages-bg-mobile.png");
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center bottom -39px;
+  background-size: 157px;
+  background-position: center bottom -45px;
+  background-color: @grey;
 }
 
 .advantages__title {
@@ -81,88 +79,209 @@
 }
 
 @media (max-width: @tablet-width) {
+  .advantages {
+  }
   .advantages__special {
     display: none;
   }
 }
 
 @media (min-width: @tablet-width) {
+  .advantages {
+    background-image: none;
+  }
   .advantages__wrapper {
     margin-bottom: 100px;
     .margin-center;
   }
 
   .advantages__question {
-    width: 586px;
+    width: 600px;
     margin-left: auto;
     margin-right: auto;
   }
 
+  .advantages__suggestion {
+    width: 360px;
+  }
+
+  .advantages__wrapper {
+    width: 660px;
+    .margin-center;
+    box-sizing: border-box;
+  }
+
   .advantages__list {
-    padding-left: 50%;
-    padding-right: 35px;
+    width: 640px;
+    box-sizing: border-box;
+    .list-reset;
+    margin-right: 20px;
+    padding-top: 74px;
     padding-bottom: 0;
+    text-align: right;
+
+    background-image: url("../img/index-imgs/advantages-bg-tablet.png");
+    background-repeat: no-repeat;
+    background-size: 268px;
+    background-position: left 20px bottom -62px;
+    background-color: @grey;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/advantages-bg-tablet.png");
+    }
+  }
+
+  .advantages__item {
+    width: 320px;
+    margin-bottom: 40px;
+    margin-right: 0;
+    box-sizing: border-box;
+    margin-left: 330px;
+  }
+
+  .advantages__item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 40px;
   }
 
   .advantages__special {
-    padding-left: 50%;
     padding-right: 35px;
     text-align: left;
+    padding-top: 100px;
+    background-color: @white;
+    background-image: url("../img/index-imgs/clock-tab.png");
+    background-repeat: no-repeat;
+    background-size: 228px;
+    background-position: left 20px top 60px;
   }
 
   .advantages__title {
     text-align: left;
+    margin-bottom: 20px;
+    margin-right: 0;
+    margin-left: 0;
   }
 
   .advantages__description {
     text-align: left;
+    padding-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .advantages__special .advantages__title {
+    font-size: 30px;
+    line-height: 36px;
+    margin-left: 330px;
+    margin-bottom: 23px;
+  }
+
+  .advantages__special .advantages__description {
+    margin-left: 330px;
+    margin-bottom: 23px;
+  }
+
+  .advantages__link {
+    padding-left: 330px;
   }
 
   .advantages__question,
   .advantages__suggestion {
     font-size: 40px;
-    line-height: auto;
-    margin: 0;
-    padding: 0;
+    line-height: 54px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .advantages__question {
+    font-size: 50px;
+    line-height: 68px;
+    width: 780px;
+  }
+
+  .advantages__suggestion {
+    font-size: 50px;
+    line-height: 68px;
+    width: 540px;
+  }
+
+  .advantages__wrapper {
+    width: 100%;
+    .margin-center;
+  }
+
   .advantages__list {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 365px;
-    padding-left: 160px;
-    padding-right: 160px;
+    width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    padding: 0;
+    background-image: none;
+    position: relative;
+    text-align: center;
+    .margin-center;
   }
 
   .advantages__item {
-    width: 252px;
+    padding-top: 365px;
+    margin: 0;
+  }
+
+  .advantages__item:nth-child(1) {
+    background-image: url("../img/index-imgs/adv-phone-1.png");
+    background-repeat: no-repeat;
+    background-position: left -38px top;
+    background-color: @grey;
+  }
+
+  .advantages__item:nth-child(2) {
+    background-image: url("../img/index-imgs/adv-phone-2.png");
+    background-repeat: no-repeat;
+    background-position: left -41px top;
+    background-color: @grey;
+  }
+
+  .advantages__item:nth-child(3) {
+    background-image: url("../img/index-imgs/adv-phone-3.png");
+    background-repeat: no-repeat;
+    background-position: left -45px top;
+    background-color: @grey;
   }
 
   .advantages__title {
     font-size: 30px;
     line-height: 30px;
+    text-align: center;
+    margin-right: 0;
+    width: 225px;
   }
 
   .advantages__description {
     font-size: 18px;
     line-height: 30px;
+    text-align: center;
+    width: 240px;
+    margin-right: 0;
   }
 
   .advantages__special {
-    padding-left: 40%;
-    text-align: left;
+    width: 900px;
+    .margin-center;
+    padding-left: 500px;
     padding-bottom: 100px;
     padding-top: 170px;
+    background-image: none;
+    background-color: @grey;
   }
 
   .advantages__special .advantages__title {
     text-align: left;
+    margin: 0;
   }
 
   .advantages__special .advantages__description {
     text-align: left;
+    margin: 0;
   }
 
   .advantages__link {

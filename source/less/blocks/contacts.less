@@ -47,6 +47,17 @@
   text-decoration: none;
 }
 
+.contacts__map {
+  position: relative;
+}
+
+.contacts__marker {
+  position: absolute;
+  z-index: 4;
+  top: 45%;
+  left: 47%;
+}
+
 @media (min-width: @tablet-width) {
   .contacts__list {
     display: flex;
@@ -70,20 +81,21 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 1200px;
+    width: 900px;
   }
 
   .contacts__item:first-child {
-    margin-right: 110px;
+    margin-right: 100px;
     order: 1;
   }
 
   .contacts__item:nth-child(2) {
-    margin-left: 110px;
+    margin-left: 100px;
     order: 3;
   }
 
   .contacts__item:last-child {
     order: 2;
+    width: 214px;
   }
 }

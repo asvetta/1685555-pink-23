@@ -1,6 +1,10 @@
 .page-header {
   color: @white;
-  background-color: @darkgrey;
+  // background-color: @darkgrey;
+
+  background: rgba(#000000, 0.3);
+  position: relative;
+  z-index: 2;
 }
 
 .page-header__logo {
@@ -22,10 +26,6 @@
 }
 
 @media (min-width: @desktop-width) {
-  .page-header {
-    background-color: @darkgrey;
-  }
-
   .page-header__logo {
     height: 40px;
     width: 147px;
